@@ -1,0 +1,306 @@
+{
+  "version":"0.6.1",
+  "advices":[
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value ~",
+        "notAMemberOf":"play\\.api\\.libs\\.json\\.Format\\[.*\\]"
+      },
+      "text":"Import \"play.api.libs.functional.syntax._\" to enable combinator syntax for play json Formats.",
+      "library":{
+        "groupId":"com.typesafe.play",
+        "artifactId":"play-json",
+        "version":"2.5.x"
+      }
+    },
+    {
+      "error":{
+        "type":"notFound",
+        "what":"value wire"
+      },
+      "text":"you need to import com.softwaremill.macwire._",
+      "library":{
+        "groupId":"com.softwaremill.macwire",
+        "artifactId":"macros",
+        "version":"2.0.0"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":"slick\\.dbio\\.DBIOAction\\[.*\\]",
+        "required":"slick\\.lifted\\.Rep\\[Option\\[.*\\]\\]"
+      },
+      "text":"Perhaps you forgot to call .result on your Rep[]? This will give you a DBIOAction that you can compose with other DBIOActions.",
+      "library":{
+        "groupId":"com.typesafe.slick",
+        "artifactId":"slick",
+        "version":"3.1.0"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value call",
+        "notAMemberOf":"scala\\.concurrent\\.Future\\[.*\\]"
+      },
+      "text":"you need to import autowire._",
+      "library":{
+        "groupId":"com.lihaoyi",
+        "artifactId":"autowire",
+        "version":"0.2.5"
+      }
+    },
+    {
+      "error":{
+        "type":"implicitNotFound",
+        "parameter":"marshaller",
+        "implicitType":"spray\\.httpx\\.marshalling\\.ToResponseMarshaller\\[scala\\.concurrent\\.Future\\[.*\\]\\]"
+      },
+      "text":"when marshalling a Future, you need an implicit ExecutionContext in scope.\nYou can read more at http://stackoverflow.com/questions/22664175/defaultmarshallers-missing-with-scala-and-spray-routing",
+      "library":{
+        "groupId":"io.spray",
+        "artifactId":"spray-routing",
+        "version":"1.3.3"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":".*",
+        "required":"spray\\.httpx\\.marshalling\\.ToResponseMarshallable"
+      },
+      "text":"you need to define a json protocol so that the response can be marshalled. Try adding:\nimport spray.httpx.SprayJsonSupport._\nimport spray.json.DefaultJsonProtocol._\nor instead of the second import, define a custom protocol for your class (see https://github.com/spray/spray-json#jsonprotocol)",
+      "library":{
+        "groupId":"io.spray",
+        "artifactId":"spray-json",
+        "version":"1.3.3"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value tupled",
+        "notAMemberOf":"object com\\.foo\\.Param"
+      },
+      "text":"Companion object hides method `tupled` from case class. Available workaround is `(Param.apply _).tupled`",
+      "library":{
+        "groupId":"org.scala",
+        "artifactId":"scala-lang",
+        "version":"2.11.7"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value flatmap",
+        "notAMemberOf":".*"
+      },
+      "text":"flat[M]ap is case sensitive",
+      "library":{
+        "groupId":"org.scala",
+        "artifactId":"scala-lang",
+        "version":"2.x"
+      }
+    },
+    {
+      "error":{
+        "type":"notFound",
+        "what":"type @@"
+      },
+      "text":"you need to import com.softwaremill.macwire.tagging._",
+      "library":{
+        "groupId":"com.softwaremill.macwire",
+        "artifactId":"macros",
+        "version":"2.0.0"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":"akka\\.http\\.scaladsl\\.common\\.NameOptionReceptacle\\[.*\\]",
+        "required":"akka\\.http\\.scaladsl\\.server\\.directives\\.ParameterDirectives\\.ParamMagnet"
+      },
+      "text":"This kind of error can occur when Akka HTTP doesn't know how to unmarshal a custom type. Make sure that you put a proper akka.http.scaladsl.unmarshalling.Unmarshaller in the implicit scope.",
+      "library":{
+        "groupId":"com.typesafe",
+        "artifactId":"akka-http-experimental",
+        "version":"2.0.3"
+      }
+    },
+    {
+      "error":{
+        "type":"divergingImplicitExpansion",
+        "forType":"io\\.circe\\.Decoder\\.Secondary\\[this\\.Out\\]",
+        "startingWith":"decodeCaseClass",
+        "in":"trait GenericInstances"
+      },
+      "text":"Some of your types cannot be deserialized from JSON. If it's a case class, then maybe some of its fields of type T requires a custom io.circe.Decoder[T]. Prepare such decoder and put it in your implicit scope.",
+      "library":{
+        "groupId":"io.circe",
+        "artifactId":"circe-generic",
+        "version":"0.2.1"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value forEach",
+        "notAMemberOf":".*"
+      },
+      "text":"for[e]ach is case sensitive",
+      "library":{
+        "groupId":"org.scala",
+        "artifactId":"scala.lang",
+        "version":"2.x"
+      }
+    },
+    {
+      "error":{
+        "type":"notFound",
+        "what":"value λ"
+      },
+      "text":"The function argument to the polymorphic lambda constructor is probably incorrect.",
+      "library":{
+        "groupId":"org.spire-math",
+        "artifactId":"kind-projector",
+        "version":"0.9.0"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value and",
+        "notAMemberOf":"play\\.api\\.libs\\.json\\.JsResult\\[.*\\]"
+      },
+      "text":"To add the additional functional syntax add import play.api.libs.functional.syntax._",
+      "library":{
+        "groupId":"com.typesafe.play",
+        "artifactId":"play-json",
+        "version":"2.5.*"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value forAll",
+        "notAMemberOf":".*"
+      },
+      "text":"for[a]ll is case sensitive",
+      "library":{
+        "groupId":"org.scala",
+        "artifactId":"scala-lang",
+        "version":"2.x"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":"akka\\.http\\.scaladsl\\.server\\.StandardRoute",
+        "required":"akka\\.stream\\.scaladsl\\.Flow\\[akka\\.http\\.scaladsl\\.model\\.HttpRequest,akka\\.http\\.scaladsl\\.model\\.HttpResponse,Any\\]"
+      },
+      "text":"did you forget to define an implicit akka.stream.ActorMaterializer?\nIt allows routes to be converted into a flow.\nYou can read more at http://doc.akka.io/docs/akka-stream-and-http-experimental/2.0/scala/http/routing-dsl/index.html",
+      "library":{
+        "groupId":"com.typesafe.akka",
+        "artifactId":"akka-http-experimental",
+        "version":"2.0.1"
+      }
+    },
+    {
+      "error":{
+        "type":"implicitNotFound",
+        "parameter":"M",
+        "implicitType":"scalaz\\.Monad\\[scala\\.concurrent\\.Future\\]"
+      },
+      "text":"No execution context available. Import scala.concurrent.ExecutionContext.Implicits.global or provide another impilicit execution context.",
+      "library":{
+        "groupId":"org.scalaz",
+        "artifactId":"scalaz-core",
+        "version":"7.2.1"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":"akka\\.http\\.scaladsl\\.server\\.RequestContext => scala\\.concurrent\\.Future\\[akka\\.http\\.scaladsl\\.server\\.RouteResult\\]",
+        "required":"akka\\.stream\\.scaladsl\\.Flow\\[akka\\.http\\.scaladsl\\.model\\.HttpRequest,akka\\.http\\.scaladsl\\.model\\.HttpResponse,Any\\]"
+      },
+      "text":"You probably have none or two or more implicit ExecutionContexts available, while there should be exactly one. See also https://github.com/akka/akka/issues/19847.",
+      "library":{
+        "groupId":"com.typesafe.akka",
+        "artifactId":"akka-http-experimental",
+        "version":"2.4.3"
+      }
+    },
+    {
+      "error":{
+        "type":"implicitNotFound",
+        "parameter":"format",
+        "implicitType":"sbinary\\.Format\\[.*\\]"
+      },
+      "text":"To enable many predefined formats import sbinary.DefaultProtocol._ \nIf still no Format is available, you may need to implement your own Format, see https://git.io/vDUVA",
+      "library":{
+        "groupId":"org.scala-sbt",
+        "artifactId":"sbinary",
+        "version":"0.4.*"
+      }
+    },
+    {
+      "error":{
+        "type":"typeMismatch",
+        "found":"akka\\.http\\.scaladsl\\.server\\.Route",
+        "required":"akka\\.stream\\.scaladsl\\.Flow\\[akka\\.http\\.scaladsl\\.model\\.HttpRequest,akka\\.http\\.scaladsl\\.model\\.HttpResponse,Any\\]",
+        "foundExpandsTo":"akka\\.http\\.scaladsl\\.server\\.RequestContext => scala\\.concurrent\\.Future\\[akka\\.http\\.scaladsl\\.server\\.RouteResult\\]"
+      },
+      "text":"Did you forget to define an implicit akka.stream.ActorMaterializer? It allows routes to be converted into a flow. You can read more at http://doc.akka.io/docs/akka-http/current/scala/http/routing-dsl/overview.html#routing-dsl-overview",
+      "library":{
+        "groupId":"com.typesafe.akka",
+        "artifactId":"akka-http",
+        "version":"10.0.0"
+      }
+    },
+    {
+      "error":{
+        "type":"implicitNotFound",
+        "parameter":"M",
+        "implicitType":"cats\\.Monad\\[scala\\.concurrent\\.Future\\]"
+      },
+      "text":"The Cats monad instances for Scala's Future can be imported using:\nimport cats.instances.future._\nMake sure also that there's an implicit execution context in scope. You can also use the global one:\nimport scala.concurrent.ExecutionContext.Implicits.global",
+      "library":{
+        "groupId":".typelevel",
+        "artifactId":"cats",
+        "version":"0.9.0"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value .*>",
+        "notAMemberOf":"scala\\.concurrent\\.Future\\[.*\\]"
+      },
+      "text":"*> is a part of Applicative's syntax. Ensure that you have imported cats.syntax.applicative._ and cats.instances.future._, also ensure that you have an implicit ExecutionContext in scope.",
+      "library":{
+        "groupId":"org.typelevel",
+        "artifactId":"cats-core",
+        "version":"1.0.1"
+      }
+    },
+    {
+      "error":{
+        "type":"notAMember",
+        "what":"value void",
+        "notAMemberOf":"scala\\.concurrent\\.Future\\[.*\\]"
+      },
+      "text":"Ensure you have implicit ExecutionContext in scope, as well as instances.future._ plus syntax.functor._ (for cats or scalaz)",
+      "library":{
+        "groupId":"org.typelevel",
+        "artifactId":"cats.core",
+        "version":"1.0.1"
+      }
+    }
+  ],
+  "fatalWarnings":[
+
+  ]
+}
